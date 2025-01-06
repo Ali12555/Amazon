@@ -12,19 +12,23 @@ const Card = (props) => {
 
         const sendData = JSON.stringify({
             img: props.img,
-            name: props.name
+            name: props.name,
+            price: props.price
         });
         nav.navigate('Shopingpage', { data: sendData });
 
     }
 
 
+
     return (
         <TouchableOpacity onPress={() => gotoshoping(props.data)} style={styles.container}>
 
             <Image source={props.img} style={styles.icon} />
+            <View style={styles.textcontainer}>
             <Text style={styles.text}>{props.name}</Text>
-
+            <Text style={styles.price}>{props.price + '₪'}</Text>
+            </View>
         </TouchableOpacity>
 
     )
@@ -58,12 +62,18 @@ const styles = StyleSheet.create({
         color: 'white'
 
     },
-    // cardstyle: {
-    //     flex: 1,
-    //     flexDirection: 'row',
-    //     alignItems: 'center',
-    //     justifyContent: 'space-between',
-    //     borderWidth: 2,
-    //     borderWidthColor: 'white',
-    // }
+price: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    margin: 20,
+    color: 'white'    
+},
+    textcontainer: {
+       
+    
+        flex : 1,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+          
+    }
 })

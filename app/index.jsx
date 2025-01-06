@@ -14,7 +14,7 @@ const nav = useNavigation()
     
     setTimeout(() => {
 
-       nav.navigate(ScreenNames.home)
+       nav.navigate('(tabs)')
     }, 1000);
 } , [])
 

@@ -16,6 +16,7 @@ const choosingItem = () => {
                     img={item.img}
                     // style={styles.img}
                     name={item.name}
+                    price={item.price}
                 //  style={styles.text}
                 />
 
@@ -54,6 +55,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginBottom: 20,
         // textAlign: 'center',
-    }
+    },
+    
 
 })
