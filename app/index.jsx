@@ -5,6 +5,7 @@ import { useNavigation } from 'expo-router';
 import ScreenNames from './ScreenNames';
 
 
+
 const index = () => {
 
 const nav = useNavigation()
@@ -14,7 +15,7 @@ const nav = useNavigation()
     
     setTimeout(() => {
 
-       nav.navigate('(tabs)')
+       nav.replace('(Drawer)')
     }, 1000);
 } , [])
 
@@ -23,6 +24,7 @@ const nav = useNavigation()
     <View style={styles.container}>
       <Image source={Images.cart()} style={styles.img} />
       {/* <Text style={styles.text}>Hello,Wellcome</Text> */}
+    
     </View>
   )
 }

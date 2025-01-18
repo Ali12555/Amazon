@@ -4,6 +4,7 @@ import { View, TextInput, Button, StyleSheet, Text, TouchableOpacity } from 'rea
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Fontisto from '@expo/vector-icons/Fontisto';
+import { LinearGradient } from 'expo-linear-gradient';
 const login = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,10 +26,11 @@ const login = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.container}>
+  <LinearGradient colors={['black', 'white']} style={styles.container}>
+    <View >
       <View style={styles.titlecontainer}>
       <Text style={styles.title}>Login</Text>
-      <Text style={styles.txt}> Pleace enter your email and password</Text>
+      <Text style={styles.subtitle}> Pleace enter your email and password</Text>
       </View>
       {errorMessage ? <Text style={styles.error}>{errorMessage}</Text> : null}
     <View style={styles.inputcontainer}>
@@ -41,6 +43,7 @@ const login = ({ navigation }) => {
         value={email}
         onChangeText={setEmail}
         placeholderTextColor={'white'}
+       
       />
     </View>
     <View style={styles.inputcontainer}>
@@ -55,6 +58,7 @@ const login = ({ navigation }) => {
         value={password}
         onChangeText={setPassword}
         placeholderTextColor={'white'}
+      
       />
       </View>
      <View style={styles.log}>
@@ -88,6 +92,8 @@ const login = ({ navigation }) => {
      
       </View>
     </View>
+    </LinearGradient>
+   
   );
 };
 
@@ -104,7 +110,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
   
   },
   input: {
@@ -121,9 +127,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
   },
-  txt: {
+  subtitle: {
     fontSize: 18,
-    color: 'silver',
+    color: 'white',
     textAlign: 'FLEX-end',
     marginBottom: 10,
   },
@@ -148,7 +154,7 @@ justifyContent: 'center',
   },
   txt :{
     fontSize: 18,
-    color: 'silver',
+    color: 'Black',
     textAlign: 'FLEX-end',
     marginBottom: 10,
 

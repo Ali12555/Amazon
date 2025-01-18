@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { useRoute } from '@react-navigation/native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { namespace } from './../.expo/types/router.d';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const Shopingpage = () => {
     var amountValue = 0;
@@ -26,21 +27,24 @@ const Shopingpage = () => {
 
 
     return (
-        <ScrollView style={styles.container}>
+        <LinearGradient colors={['black', 'white']} style={styles.container}>
+        <ScrollView>
             <Image source={data.img} style={styles.haderimage} />
             <Text style={styles.text}>{data.name}</Text>
-
+        <LinearGradient colors={['black', 'white']} style={styles.order}>
             <  View style={styles.order}>
                
                     <Text style={styles.price}>{data.price + '₪'}</Text>
                 <View style={styles.amountcontainer}>
-                    <AntDesign name="pluscircleo" size={35} color="white" onPress={onPlusPress} />
-                    <Text style={styles.amount}>{amountValue}</Text>
-                    <AntDesign name="minuscircleo" size={35} color="white" onPress={onMinusPress} />
+                    <AntDesign name="pluscircleo" size={35} color="white" onPress={() => onPlusPress()} />
+                    <Text style={styles.amount}>{Amount}</Text>
+                    <AntDesign name="minuscircleo" size={35} color="white" onPress={() => onMinusPress()} />
 
                 </View>
 
             </View>
+        </LinearGradient>
+
             <TouchableOpacity style={styles.orderbtncontainer}>
                 <Text style={styles.orderbtn}>Buy It Now</Text>
 
@@ -68,6 +72,8 @@ const Shopingpage = () => {
 
 
         </ScrollView>
+
+        </LinearGradient>
     )
 }
 
@@ -86,6 +92,7 @@ const styles = StyleSheet.create({
         margin: 10
     },
     text: {
+            padding: 20,
         fontSize: 30,
         fontWeight: 'bold',
         color: 'white',
@@ -102,12 +109,12 @@ const styles = StyleSheet.create({
         // textAlign: 'center',
     },
     order: {
-        width: '100%',
+        width: 420,
         flexDirection: 'row',
-        backgroundColor: 'black',
+       
         justifyContent: 'space-between',
-        alignItems: 'center',
-     
+        alignItems: 'C',
+        alignSelf: 'center',
         borderRadius: 30,
         padding: 10,
         shadowColor: 'black',

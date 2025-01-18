@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, TouchableOpaci
 import { useState } from 'react';
 import React from 'react'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const NewLogin = () => {
   const [number, setNumber] = useState('');
@@ -18,7 +19,8 @@ const NewLogin = () => {
     }
   };
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={['black', 'white']} style={styles.container}>
+    <View >
 
       <Text style={styles.title}>Create Your Account</Text>
       <View style={styles.inputcontainer}>
@@ -62,6 +64,7 @@ const NewLogin = () => {
         </View>
       </View>
     </View>
+    </LinearGradient>
 
 
 

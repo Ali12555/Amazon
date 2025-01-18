@@ -1,17 +1,25 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native'
 import React, { useEffect } from 'react'
+import AntDesign from '@expo/vector-icons/AntDesign';
 
-
-import { catagoryClothes, data } from './../../constants/Data';
+import { catagoryClothes, data, jackets } from '../../../constants/Data';
 import { useNavigation } from 'expo-router';
-import Homepage from './../../components/homepage';
+import Homepage from '../../../components/homepage';
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 
 const Home = () => {
-// useEffect(() => {
-//     navigation.setOptions({headerShown: false})    
-//   }, [])
+  //   const reanderitem =(jackets)={
+  // return(
+  //   jackets.
+  // )
+
+  //   }
+  const searchnav = useNavigation();
+  const gotoSearch = () => {
+    searchnav.navigate('search')
+  }
 
 
   const navigation = useNavigation();
@@ -26,7 +34,8 @@ const Home = () => {
       return (
         data.map((item, index) => (
 
-          <TouchableOpacity key={index} onPress={() => gotochosing(item.data)} >
+          <TouchableOpacity
+            key={index} onPress={() => gotochosing(item.data)} >
             <Image source={item.img} style={styles.img} key={index} />
           </TouchableOpacity>
         ))
@@ -50,11 +59,14 @@ const Home = () => {
 
 
   return (
-    <ScrollView style={styles.container}>
-     <Homepage />
+    <LinearGradient colors={['black', 'white']} style={styles.container}>
+   
+      <ScrollView >
+        <Homepage />
 
-      {renderData()}
-    </ScrollView>
+        {renderData()}
+      </ScrollView>
+    </LinearGradient>
   )
 }
 
@@ -63,16 +75,10 @@ export default Home
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black'
   },
   catagory: {
-    // flex: 1,
-    // flexDirection: 'row',
     height: 250,
     margin: 10,
-    // backgroundColor: "#fff"
-    borderWidth: 2,
-    // borderColor: "#fff"
   },
   name: {
     fontSize: 20,
@@ -85,5 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     margin: 10
   }
+  ,
+
 
 })

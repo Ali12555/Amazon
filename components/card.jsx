@@ -22,6 +22,7 @@ const Card = (props) => {
 
 
     return (
+
         <TouchableOpacity onPress={() => gotoshoping(props.data)} style={styles.container}>
 
             <Image source={props.img} style={styles.icon} />
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
         borderColor: 'white',
         borderRadius: 40,
         margin: 4,
-        backgroundColor: 'black'
+        // backgroundColor: 'black'
 
     },
     icon: {

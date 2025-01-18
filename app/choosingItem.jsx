@@ -3,6 +3,7 @@ import React from 'react'
 import { data } from '../constants/Data'
 import Card from '../components/card';
 import { useRoute } from '@react-navigation/native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const choosingItem = () => {
     const { params } = useRoute();
@@ -27,9 +28,11 @@ const choosingItem = () => {
 
     };
     return (
-        <ScrollView style={styles.container}>
+        <LinearGradient colors={['black', 'white']} style={styles.container}>
+        <ScrollView >
             {rendercards()}
         </ScrollView>
+        </LinearGradient>
     )
 };
 

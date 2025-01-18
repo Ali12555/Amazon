@@ -60,9 +60,9 @@ function TabBar({ state, descriptors, navigation }) {
             style={styles.Tabcontainer}
           >
               
-            {icons[label]({ color: isFocused ? "#9400d3" : "white" })}
+            {icons[label]({ color: isFocused ? "white" : "white" })}
            
-            <Text style={{ color: isFocused ? "#9400d3" : "white" }}>
+            <Text style={{ color: isFocused ? "white" : "white" }}>
               {label}
             </Text>
           </TouchableOpacity>
