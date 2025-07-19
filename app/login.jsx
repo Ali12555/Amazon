@@ -1,29 +1,44 @@
-import { useNavigation } from 'expo-router';
+import { useNavigation, useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { LinearGradient } from 'expo-linear-gradient';
-const login = ({ navigation }) => {
+import { Login } from '../constants/api';
+const login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+
   
+const nav =useRouter();
+  const goToHome = () => {
+const data={
+    Email:email, //      ((حسب (المدخل) المستصفح name)=(phone حسب السيرفر )
+  Password:password //  ((حسب (المدخل) المستصفح password)=(password حسب السيرفر )
+}
+Login(data)   //(نداء للعمليه login وتعوض ال data بمكان ال body )
+.then((response)=>{
+  console.log(response);
 
-  const handleLogin = () => {
+
+  if (response.success==true) // اذا الاسم والسسما صحيحه وموجوده انتقل الى الصفحه الرئيسيه 
+  
+    nav.push('/Home');
+  
    
-    if (email === 'test@gmail.com' && password === '123') {
-      navigation.navigate('homepage');
-    } else {
-      setErrorMessage('erorr in email or password');
-    }
+})
+      .catch((error) => {      //اذا في مشكله بالسيرفر او الاتصال بالسيرفر 
+        console.error('Login error:', error.message);  
+        alert('اذا في مشكله بالسيرفر او الاتصال بالسيرفر .');
+      }
+    );
   };
+  
+const goToRegister = () => {
+  nav.push('/NewLogin');
+};
 
-  const newloginNavigation = useNavigation();
-  const moveToNewLogin = () => {
-    newloginNavigation.navigate('NewLogin');
-  }
 
   return (
   <LinearGradient colors={['black', 'white']} style={styles.container}>
@@ -32,7 +47,6 @@ const login = ({ navigation }) => {
       <Text style={styles.title}>Login</Text>
       <Text style={styles.subtitle}> Pleace enter your email and password</Text>
       </View>
-      {errorMessage ? <Text style={styles.error}>{errorMessage}</Text> : null}
     <View style={styles.inputcontainer}>
       <View style={styles.Iconinput}>
     <Fontisto name="email" size={24} color="white" />
@@ -62,12 +76,12 @@ const login = ({ navigation }) => {
       />
       </View>
      <View style={styles.log}>
-       <TouchableOpacity onPress={handleLogin}>
+       <TouchableOpacity onPress={goToHome} >
         <Text style={styles.logtxt}>Sign in</Text>
        </TouchableOpacity>
        
            </View>
-     <TouchableOpacity onPress={()=>moveToNewLogin()}> 
+     <TouchableOpacity  onPress={goToRegister} > 
       <View style={styles.txtcontainer}>
         <Text style={styles.txt}>Creat new account</Text>
         </View>

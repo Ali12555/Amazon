@@ -1,22 +1,22 @@
 const Images = {
-     cart : () => require('./cart.jpg'),
+     cart : () => require('./cart.png'),
      blackcart: () => require('./blackcart.jpg'),
      purplecart: () => require('./purplecart.jpg'),
      Wellcome: () => require('./Wellcome.jpg'),
      shopingcart: () => require('./shopingcart.png'),
      //catagoryClothes
-     shose: () => require('./shose.jpg'),
-     pants: () => require('./pants.jpg'),
-     shorts: () => require('./shorts.jpg'),
-     tshirt: () => require('./tshirt.jpg'),
-     jacket: () => require('./jacket.jpg'),
+     shose: () => require('./shose.png'),
+     pants: () => require('./pants.png'),
+     shorts: () => require('./shorts.png'),
+     tshirt: () => require('./tshirt.png'),
+     jacket: () => require('./jacket.png'),
 
 //shosephoto
-     nikeshose: () => require('./nikeshose.jpg'),
-     adidasshose: () => require('./addidasshose.jpg'),
-     pumashose: () => require('./pumashose.jpg'),
-     perriecardienshose: () => require('./perriecardienshose.jpg'),
-     bossshose: () => require('./bossshose.jpg'),
+     nikeshose: () => require('./nikeshose (2).png'),
+     adidasshose: () => require('./addidasshose.png'),
+     pumashose: () => require('./pumashose.png'),
+     perriecardienshose: () => require('./perriecardienshose.png'),
+     bossshose: () => require('./bossshose.png'),
 //pantsphoto
      nikepants: () => require('./nikepants.jpg'),
      adidaspants:() => require('./adidaspants.jpg'),
@@ -30,7 +30,7 @@ const Images = {
      perriecardienshirts:() => require('./perriecardienshirts.jpg'),
      bossshirts: () => require('./bossshirts.jpg'),
 //jacketphoto
-     nikejacket: () => require('./nikejacket.jpg'),
+     nikejacket: () => require('./nikejacket.png'),
      adidasjacket:() => require('./adidasjacket.jpg'),
      pumajacket: () => require('./pumajacket.jpg'),
      perriecardienjacket:() => require('./perriecardienjacket.jpg'),
@@ -116,6 +116,16 @@ const Images = {
      potcooking3: () => require('./potcooking3.jpg'),
      potcooking4: () => require('./potcooking4.jpg'),     
      potcooking5: () => require('./potcooking5.jpg'),
+     //--
+     background: () => require('./background.jpg'),
+     //
+     profile: () => require('./profile.jpg'),
+     //
+     d1: () => require('./d1.png'),
+     d2: () => require('./d2.png'),
+     d3: () => require('./d3.png'),
+     d4: () => require('./d4.png'),
+
 
      
 

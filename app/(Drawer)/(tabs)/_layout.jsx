@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Stack, Tabs } from 'expo-router'
 import TabBar from '../../../components/TabBar';
@@ -9,7 +9,7 @@ import HeaderApp from '../../../components/HeaderApp';
 const _layout = () => {
   return (
 
-
+    
     <Tabs
 
       screenOptions={{headerShown: false}}
@@ -35,13 +35,12 @@ const _layout = () => {
         options={{ title: 'Profile' }}
       />
       <Tabs.Screen
-        name='Settings'
-        options={{ title: 'Settings' }}
+        name='Cart'
+        options={{ title: 'Cart' }}
       />
 
 
     </Tabs>
-
 
 
   )

@@ -3,28 +3,40 @@ import { useState } from 'react';
 import React from 'react'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { LinearGradient } from 'expo-linear-gradient';
+import {createUser} from '../constants/api'
+import { useNavigation, useRouter } from 'expo-router';
 
 const NewLogin = () => {
-  const [number, setNumber] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+// Name
+// Password
+// Email
+const nav=useRouter();
 
-  const handleLogin = () => {
-
-    if (email === 'user@example.com' && password === 'password' && number === '1234567890') {
-      navigation.navigate('homepage');
-    } else {
-      setErrorMessage('erorr in email or password');
+     const regiisterUser=()=>{
+    const body={
+       Name:name,
+        Email:email,
+        Password:password  
     }
-  };
+    console.log(body);
+    
+    createUser(body)
+    .then((Response)=>{
+        if(Response.success==true)
+    nav.push('/Home');
+        else
+        alert('משהוא לא תקין')
+    })
+   }
   return (
     <LinearGradient colors={['black', 'white']} style={styles.container}>
     <View >
 
       <Text style={styles.title}>Create Your Account</Text>
       <View style={styles.inputcontainer}>
-        {errorMessage ? <Text style={styles.error}>{errorMessage}</Text> : null}
         <View style={styles.Iconinput}>
           <AntDesign name="mail" size={24} color="white" />
           <TextInput
@@ -50,15 +62,15 @@ const NewLogin = () => {
           <AntDesign name="phone" size={24} color="white" />
           <TextInput
             style={styles.input}
-            placeholder="Enter your number"
+            placeholder="Enter your Name"
             secureTextEntry
-            value={number}
-            onChangeText={setNumber}
+            value={name}
+            onChangeText={setName}
             placeholderTextColor={'white'}
           />
         </View>
         <View style={styles.log}>
-          <TouchableOpacity onPress={handleLogin}>
+          <TouchableOpacity onPress={regiisterUser} >
             <Text style={styles.txt}>Login</Text>
           </TouchableOpacity>
         </View>

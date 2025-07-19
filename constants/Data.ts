@@ -6,36 +6,103 @@ import Images from "@/assets/images/Images";
 export const shose = [
     {
         name: "nike shose",
-        img: Images.nikeshose(),
+       
         id: 1,
         price:1000,
-        
+        colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag : Images.nikeshose(), 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bossshose() , 
+                sizes : ['s' , 'm']
+            }
+        ]
       
 
     },
     {
         name: "adidas shose",
-        img: Images.adidasshose(),
         id: 2,
-        price:250
+        price:250,
+        colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.adidasshose(),
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.pumashose() , 
+                sizes : ['s' , 'm']
+            }
+        ]
+       
     },
     {
         name: "puma     shose",
-        img: Images.pumashose(),
         id: 3,
-        price:500
+        price:500,
+        colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.pumashose() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bossshose() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "boss shose",
-        img: Images.bossshose(),
+       
         id: 4,
-        price:320
+        price:320,
+        colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.bossshose() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.nikeshose() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "pierre cardin shose",
-        img: Images.perriecardienshose(),
         id: 5,
-        price:400
+        price:400,
+        colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.perriecardienshose() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.nikeshose() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
 ];
 export const pants = [
@@ -43,31 +110,106 @@ export const pants = [
         name: "nike pants",
         img: Images.nikepants(),
         id: 1,
-        price: 100
+        price: 100,
+        colors:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.nikepants() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bosspants() , 
+                sizes : ['s' , 'm']
+
+            }
+
+    ]
     },
+
     {
         name: "adidas    pants",
         img: Images.adidaspants(),
         id: 2,
-        price: 250
+        price: 250,
+        colors:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.adidaspants() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienpants() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "boss pants",
         img: Images.bosspants(),
         id: 3,
-        price: 320
+        price: 320,
+        colors:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.bosspants() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienpants() , 
+                sizes : ['s' , 'm']
+            }
+        ]
+
     },
     {
         name: "pierre cardin pants",
         img: Images.perriecardienpants(),
         id: 4,
-        price: 400
+        price: 400,
+        colors:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.perriecardienpants() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bosspants() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "puma pants",
         img: Images.pumapants(),
         id: 5,
-        price: 500
+        price: 500,
+        colors:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.pumapants() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienpants() , 
+                sizes : ['s' , 'm']
+            }
+        ]
+
     },
 ];
 
@@ -76,31 +218,102 @@ export const tshirts = [
         name: "nike shirts",
         img: Images.nikeshirts(),
         id: 1,
-        price: 100
+        price: 100,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.nikeshirts() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.adidasshirts() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "adidas shirts",
         img: Images.adidasshirts(),
         id: 2,
-        price: 250
+        price: 250,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.adidasshirts() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bossshirts() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "boss shirts",
         img: Images.bossshirts(),
         id: 3,
-        price: 320
+        price: 320,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.bossshirts() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienshirts() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "pierre cardin shirts",
         img: Images.perriecardienshirts(),
         id: 4,
-        price: 400
+        price: 400,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.perriecardienshirts() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.pumashirts() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "puma shirt",
         img: Images.pumashirts(),
         id: 5,
-        price: 500
+        price: 500,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.pumashirts() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienshirts() , 
+                sizes : ['s' , 'm']
+            }
+        ]
+    
     },
 
 
@@ -112,31 +325,101 @@ export const jackets = [
         name: "nike jacket",
         img: Images.nikejacket(),
         id: 1,
-        price: 100
+        price: 100,
+        Color:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.nikejacket() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.adidasjacket() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "adidas jacket",
         img: Images.adidasjacket(),
         id: 2,
-        price: 250
+        price: 250,
+        Color:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.adidasjacket() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bossjacket() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "boss jacket",
         img: Images.bossjacket(),
         id: 3,
-        price: 320
+        price: 320,
+        Color:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.bossjacket() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienjacket() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "pierre cardin jacket",
         img: Images.perriecardienjacket(),
         id: 4,
-        price: 400
+        price: 400,
+        Color:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.perriecardienjacket() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.pumajacket() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "puma jacket",
         img: Images.pumajacket(),
         id: 5,
-        price: 500
+        price: 500,
+        Color:[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.pumajacket() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienjacket() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
 
 
@@ -146,31 +429,101 @@ export const shorts = [
         name: "nike short",
         img: Images.nikeshort(),
         id: 1,
-        price: 100
+        price: 100,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.nikeshort() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.adidasshort() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "adidas short",
         img: Images.adidasshort(),
         id: 2,
-        price: 250
+        price: 250,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.adidasshort() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.bossshort() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "boss short",
         img: Images.bossshort(),
         id: 3,
-        price: 320
+        price: 320,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.bossshort() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienshort() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "pierre cardin short",
         img: Images.perriecardienshort(),
         id: 4,
-        price: 400
+        price: 400,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.perriecardienshort() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.pumashort() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
     {
         name: "puma short",
         img: Images.pumashort(),
         id: 5,
-        price: 500
+        price: 500,
+        Colors :[
+            {
+                colorName :'red', 
+                color : "red",
+                imag :Images.pumashort() , 
+                sizes : ['xl' , 'l']
+            },
+            {
+                colorName :'blue', 
+                color : "blue",
+                imag :Images.perriecardienshort() , 
+                sizes : ['s' , 'm']
+            }
+        ]
     },
 ];
 
@@ -633,4 +986,35 @@ export const data = [
     },
 
 ];
-const dataclothes = [];
+export const dataclothes = [
+{
+name: "Nike",
+img:Images.d1(),
+id:1,
+price: 500
+
+
+},
+{
+name: "adidas",
+img:Images.d2(),
+id:2,
+price: 600
+},
+{
+name: "Puma",
+img:Images.d3(),
+id:3,
+price: 450
+},
+{
+name: "Boss",
+img:Images.d4(),
+id:4,
+price: 300
+},
+
+
+
+
+];

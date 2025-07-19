@@ -39,7 +39,9 @@ const styles = StyleSheet.create({
     backgroundColor:'black'
   },
   img: {
-    flex:1 , 
+    width: "90%",
+    height: "40%",
+    
     resizeMode:'contain' , 
     // opacity: 0.6
   },

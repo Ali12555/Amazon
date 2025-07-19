@@ -1,21 +1,19 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, Button, Dimensions } from 'react-native'
 import React, { useEffect } from 'react'
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-import { catagoryClothes, data, jackets } from '../../../constants/Data';
+import { catagoryClothes, data, jackets, dataclothes } from '../../../constants/Data';
 import { useNavigation } from 'expo-router';
 import Homepage from '../../../components/homepage';
 import { LinearGradient } from 'expo-linear-gradient';
 
 
 
-const Home = () => {
-  //   const reanderitem =(jackets)={
-  // return(
-  //   jackets.
-  // )
+const size = Dimensions.get('window');
 
-  //   }
+const Home = () => {
+
+
   const searchnav = useNavigation();
   const gotoSearch = () => {
     searchnav.navigate('search')
@@ -34,7 +32,7 @@ const Home = () => {
       return (
         data.map((item, index) => (
 
-          <TouchableOpacity
+          <TouchableOpacity style={styles.imgcontainer}
             key={index} onPress={() => gotochosing(item.data)} >
             <Image source={item.img} style={styles.img} key={index} />
           </TouchableOpacity>
@@ -55,15 +53,15 @@ const Home = () => {
     )
   }
 
-  // console.log(data, RenderData());
 
 
   return (
     <LinearGradient colors={['black', 'white']} style={styles.container}>
-   
-      <ScrollView >
-        <Homepage />
 
+      <ScrollView >
+     
+        
+        <Homepage />
         {renderData()}
       </ScrollView>
     </LinearGradient>
@@ -75,6 +73,7 @@ export default Home
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 100
   },
   catagory: {
     height: 250,
@@ -86,12 +85,29 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   img: {
-    width: 200,
-    height: 200,
-    borderRadius: 30,
-    margin: 10
+    width: size.width*0.4,
+    height: size.height*0.2,
+    borderRadius: 70,
+    margin: 10,
+    resizeMode: 'contain',
+    alignSelf: 'center'
   }
   ,
+  imgcontainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'white',
+    margin: "2%",
+    borderRadius: 30,
+    shadowColor: 'black',
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 10 },
+  }
+  ,
+ 
 
 
 })

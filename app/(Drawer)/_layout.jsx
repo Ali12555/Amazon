@@ -5,28 +5,37 @@ import { Drawer } from 'expo-router/drawer';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
 import HeaderApp from '../../components/HeaderApp';
+import DrawerContent from '../../components/DrawerContent';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 const DarawerLayout = () => {
   return (
+    
     <GestureHandlerRootView>
       <Drawer
-        screenOptions={{ header: (props) => <HeaderApp {...props} /> }}
-      // screenOptions={{ headerShown: false }}
+        screenOptions={{
+          header: (props) => <HeaderApp {...props} />,
+          drawerItemStyle: { backgroundColor: 'white', marginVertical:5 ,borderRadius: 50},
+        }}
+        drawerContent={(props) => <DrawerContent {...props} />}
+
+    
       >
         <Drawer.Screen name="(tabs)"
           options={{
             drawerLabel: 'Home',
             headerTitle: 'Home',
             drawerIcon: ({ color, size }) => (
-              <Ionicons name="home" size={size} color={color} />
+              <Ionicons name="home" size={size} color={"black"} />
             )
           }} />
-        <Drawer.Screen name="news"
+        <Drawer.Screen name="Settings"
           options={{
-            drawerLabel: 'news',
-            headerTitle: 'news',
+          
+            drawerLabel: 'Settings',
+            headerTitle: 'Settings',
             drawerIcon: ({ color, size }) => (
-              <Ionicons name="newspaper" size={size} color={color} />
+              <AntDesign name="setting" size={size} color={"black"} />
             )
           }} />
 

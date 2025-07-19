@@ -4,20 +4,25 @@ import { data } from '../constants/Data'
 import Card from '../components/card';
 import { useRoute } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useLocalSearchParams } from 'expo-router';
+// import { get } from './../hooks/api';
 
 const choosingItem = () => {
-    const { params } = useRoute();
-    const data = JSON.parse(params?.data || []);
+    const params = useLocalSearchParams();
 
+    const data = JSON.parse(params?.data || []);
+    console.log("data>>>", data);
+    // get("/test").then((res) => console.log("the get method ",res)).catch((err) => console.log(err));    
     const rendercards = () => {
         const cards = data.map((item, index) => {
             return (
 
                 <Card key={index}
-                    img={item.img}
-                    // style={styles.img}
+                    img={item.colors[0].imag}
+                    style={styles.img}
                     name={item.name}
                     price={item.price}
+                    colors={item.colors}
                 //  style={styles.text}
                 />
 
@@ -29,9 +34,9 @@ const choosingItem = () => {
     };
     return (
         <LinearGradient colors={['black', 'white']} style={styles.container}>
-        <ScrollView >
-            {rendercards()}
-        </ScrollView>
+            <ScrollView >
+                {rendercards()}
+            </ScrollView>
         </LinearGradient>
     )
 };
@@ -49,6 +54,7 @@ const styles = StyleSheet.create({
         height: 200,
         borderRadius: 30,
         margin: 10,
+        resizeMode: 'contain'
 
     },
     text: {
@@ -59,6 +65,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         // textAlign: 'center',
     },
-    
+
 
 })

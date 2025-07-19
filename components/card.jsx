@@ -8,12 +8,13 @@ import { useNavigation } from 'expo-router';
 const Card = (props) => {
     const nav = useNavigation();
     const gotoshoping = () => {
-        console.log(props);
+        // console.log(props);
 
         const sendData = JSON.stringify({
             img: props.img,
             name: props.name,
-            price: props.price
+            price: props.price , 
+            colors: props.colors
         });
         nav.navigate('Shopingpage', { data: sendData });
 
@@ -29,6 +30,7 @@ const Card = (props) => {
             <View style={styles.textcontainer}>
             <Text style={styles.text}>{props.name}</Text>
             <Text style={styles.price}>{props.price + '₪'}</Text>
+            <Text style={styles.price}>amount {props?.amount||''}</Text>
             </View>
         </TouchableOpacity>
 
@@ -39,7 +41,8 @@ export default Card
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
+        height: 200,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -51,10 +54,11 @@ const styles = StyleSheet.create({
 
     },
     icon: {
-        width: 150,
-        height: 150,
+        width: 170,
+        height: 170,
         borderRadius: 30,
-        margin: 30
+        margin: 30,
+        resizeMode: 'contain'
     },
     text: {
         fontSize: 20,
